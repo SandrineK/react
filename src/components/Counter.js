@@ -1,3 +1,5 @@
+import React from 'react';
+
 /*
  * const [a, b] = useState();
  * a = state object (getter)
@@ -6,15 +8,36 @@
  * const [currentStateValue, functionToSetNewStateValue] = useState(initialStateValue)
  * this syntax use javascript detructuring
  */
+import {useState} from "react";
 
-export default function Counter() {
-    const [counter, setCounter] = useState(5);
-    return <button onClick={() => setCounter(counter * 2)}>{counter}</button>;
+function Button(props) {
+    const handleClick = () => props.onClickFunction(props.increment);
+    return (
+        <button onClick={handleClick}>
+            +{props.increment}
+        </button>
+    );
 }
 
-function Button2() {
+function Display(props) {
+    return (
+        <div>{props.message}</div>
+    );
+}
+
+export default function Counter() {
     const [counter, setCounter] = useState(0);
-    return <button onClick={() => console.log(Math.random())}>console log random value</button>;
+    const incrementCounter = (incrementValue) => setCounter(counter+incrementValue);
+    return (
+        <>
+            <h1>Mon premier component react!</h1>
+            <Button onClickFunction={incrementCounter} increment={1}/>
+            <Button onClickFunction={incrementCounter} increment={5}/>
+            <Button onClickFunction={incrementCounter} increment={10}/>
+            <Button onClickFunction={incrementCounter} increment={100}/>
+            <Display message={counter}/>
+        </>
+    );
 }
 
 
