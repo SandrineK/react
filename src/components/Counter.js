@@ -30,7 +30,7 @@ export default function Counter() {
     const incrementCounter = (incrementValue) => setCounter(counter+incrementValue);
     return (
         <>
-            <h1>Mon premier component react!</h1>
+            <h1>Counter</h1>
             <Button onClickFunction={incrementCounter} increment={1}/>
             <Button onClickFunction={incrementCounter} increment={5}/>
             <Button onClickFunction={incrementCounter} increment={10}/>
