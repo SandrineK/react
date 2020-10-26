@@ -1,8 +1,8 @@
 import React from 'react';
-import Hello from "./Hello";
+import HelloJsx from "./HelloJsx";
 
 export default function App() {
     return (
-        <Hello/>
+        <HelloJsx/>
     );
 }
