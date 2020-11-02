@@ -4,6 +4,8 @@ import HelloJsx from "./tuto1/HelloJsx";
 import Counter from "./tuto1/Counter";
 import ConditionalStyle from "./tuto1/ConditionalStyle";
 import {GithubCardApp} from "./tuto1/GithubCardApp";
+import CssInJsComponent from "./tuto-css/CssInJsComponent";
+import CssStylesheet from "./tuto-css/CssStylesheet";
 
 
 export function App({initialData}) {
@@ -15,6 +17,8 @@ export function App({initialData}) {
             <ConditionalStyle/>
             <GithubCardApp title="The GitHub Cards App"/>
             <StarMatchGame/>
+            <CssInJsComponent/>
+            <CssStylesheet/>
         </>
     );
 }
